@@ -205,12 +205,23 @@
         <label for="last-name">Last Name:</label>
         <input type="text" id="last-name" name="last-name" placeholder="Enter last name" required>
 
-        <label for="contact-method">Preferred Contact Method:</label>
-        <select id="contact-method" name="contact-method" required>
-          <option value="">Email</option>
-          <option value="text">Text</option>
-          <option value="phone">Phone</option>
-        </select>
+        <label for="my-phone">Phone<span class="required">*</span></label>
+        <input type="tel" name="my-phone" id="my-phone"required>
+
+        <label for="my-email">Email<span class="required">*</span></label>
+        <input type="email" name="my-email" id="my-email" required>
+
+        <fieldset>
+          <legend>Preferred Contact Method<span class="required">*</span></legend>
+          <input type="radio" name="contact-pref" id="pref-email" checked>
+          <label for="pref-email">Email</label>
+
+          <input type="radio" name="contact-pref" id="pref-phone">
+          <label for="pref-phone">Phone</label>
+
+          <input type="radio" name="contact-pref" id="pref-text">
+          <label for="pref-text">Text</label>
+        </fieldset>
 
         <label for="destination">Destination:</label>
         <select id="destination" name="destination" required>
