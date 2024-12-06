@@ -58,8 +58,6 @@ table {
     font-family: 'Molle', 'Montserrat', sans-serif;
     
 }
-
-@media screen and (min-width: 429px){
   #menu-toggle {
     position: absolute;
     top: 0;
@@ -324,7 +322,7 @@ h1 {
         color: black;
         margin: 1rem;
     }
-  }
+
     @media screen and (min-width:767px) {
 
       #menu-toggle {
