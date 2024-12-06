@@ -1,0 +1,558 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/* Styled by Lauren Auer*/
+
+/* Reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*styles*/
+
+@import url("https://fonts.google.com/share?selection.family=Molle:ital@1%7CMontserrat");
+
+:root{
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+    --dark-gray:#222222;
+    --light-gray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
+    font-family: 'Molle', 'Montserrat', sans-serif;
+    
+}
+
+@media screen and (min-width: 429px){
+  #menu-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0; 
+  }
+  
+  /* "Menu" label */
+  #menu-toggle label {
+    display: block;
+    font-size: 18px;
+    padding: 10px 15px;
+    background-color: var(--yellow);
+    text-align: center;
+    display: block;
+    width: 210px;
+    height:50px;
+    font-weight: bold;
+  }
+  
+  /* Hide the checkbox */
+  #toggle {
+    display: none;
+  }
+  
+  /* Style the dropdown menu */
+  #menu-toggle ul {
+    list-style: none;
+    padding: 10px 0;        
+    margin: 0;              
+    display: none;       
+    position: fixed;         
+    top: 0;                 
+    left: 0;                  
+    width: 100%;               
+    background-color: var(--teal);
+    z-index: 100;             
+    border-bottom: 3px solid black; 
+  }
+  
+  /* Style dropdown items */
+  #menu-toggle ul li {
+    padding: 10px; 
+    text-align: center; 
+    border-bottom: 1px solid black;
+  }
+  
+  #menu-toggle ul li:last-child {
+    border-bottom: none;
+  }
+  
+  /* Style links inside the dropdown */
+  #menu-toggle ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold; 
+    display: block; 
+    padding: 10px 20px;
+  }
+  
+  /* Show the dropdown menu when the checkbox is checked */
+  #toggle:checked + label + ul {
+    display: block;       
+  }
+
+/* Small Screen Start*/
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+#skip{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+   
+#skip:focus{
+    position: static;
+    width: auto;
+    height: auto;
+  }
+body{
+      color:var(--black);
+      overflow-x:hidden;
+    }
+    
+/*  for the header */
+header {
+  text-align: left;
+  padding: 10px;
+  background: linear-gradient(to bottom, var(--teal), white);
+}
+
+#logo img {
+  max-width: 150px;
+}
+
+h1 {
+  margin: 10px 0;
+}
+
+    section{
+      padding: 10px;
+    }
+
+    div{
+      padding: 2rem;
+    }
+
+    h1,h2,h3{
+        font-family:'Molle', sans-serif ;
+    }
+    h1{
+      font-size: 50px
+    }
+    h2, h3{
+      font-size: 40px;
+    }
+
+    h4,p,q,small,nav,button,form, span{
+        font-family:'Montserrat', sans-serif ;
+    }
+    h4{
+        font-weight: bold;
+        font-size: 26px;
+    }
+    p, q, span{
+      font-size: 20px;
+    }
+    q{
+      font-style: italic;
+    }
+    header h1, header p{
+      margin:20px;
+    }
+    #intro{
+      padding:0;
+    }
+    #intro h2, #intro p{
+      margin:20px;
+    }
+    #img-grid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+  }
+    #intro img{
+      width:429px;
+      margin-bottom:20px;
+    }
+    
+    #plan{
+      background-color: var(--yellow);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    #plan section{
+        background-color:var(--teal);
+        width: 358px;
+        height:302px;
+        margin: 10px;
+        border-radius: 10px ;
+        border: 3px solid white;
+        align-content: center;
+    }
+
+    #testimonials{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    #testimonials h3{
+      text-align:left;
+    }
+
+    #about{
+        background-color:#499BD2;
+        
+    }
+
+    #about div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    form {
+      display: block;
+      width: 100%;
+      padding: 0;
+      margin: 0 auto;
+      color: var(--purple);
+      font-size: 20px;
+    }
+    
+    label {
+      font-size: 20px;
+      margin-bottom: 5px;
+      display: block;
+    }
+    
+    input, select {
+      width: 100%;
+      height: 50px;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid var(--purple);
+      box-sizing: border-box;
+      font-size: 20px;
+    }    
+    
+    fieldset {
+      padding: 0;
+      margin: 0;
+      border: none;
+      box-sizing: border-box;
+    }
+    
+    .required {
+      color: var(--purple);
+      font-weight: bold;
+    }
+    
+    #selects, #names, #nums {
+      padding: 0;
+      margin: 0;
+    }
+    
+    input[type="submit"] {
+      padding: 0;
+      height: 50px; 
+      color: #fff;
+      background-color: var(--purple);
+      border: none;
+      margin-top: 10px;
+      font-size: 20px;
+    }
+    .custom-select{
+      padding:0;
+    }
+    footer{
+        font-family:'Montserrat', sans-serif ;
+        background-color: var(--light-gray);
+        text-align: center;
+    }
+    footer p, a{
+        display: inline-flex;
+        text-decoration: none;
+        color: black;
+        margin: 1rem;
+    }
+  }
+    @media screen and (min-width:767px) {
+
+      #menu-toggle {
+        position: relative;
+        display:flex;
+        justify-content: center;
+        align-items:center;
+       
+      }
+      
+      /* "Menu" label */
+      #menu-toggle label {
+        display: none;
+      }
+      
+      /* Hide the checkbox */
+      #toggle {
+        display: none;
+      }
+      
+      /* Style the dropdown menu */
+      #menu-toggle ul {
+        border:none;
+        position:relative;
+        bottom:20px;
+        list-style: none;                 
+        margin: 0;                 
+        display: flex; 
+        justify-content: center;
+        align-items: center;            
+        width: 100%;              
+        background: none;
+        z-index: 100;
+      }
+      
+      /* Style dropdown items */
+      #menu-toggle ul li {
+        color:#000000;
+        border:none;
+        display: flex;
+        margin: 10px;
+        padding: 5px;           
+        text-align: center;   
+        background-color:white;   
+      }
+
+      #menu-toggle ul li:hover{
+        background-color: var(--yellow);
+      }
+    
+      #menu-toggle ul li a {
+        text-decoration: none; 
+        color: black;           
+        font-size: 18px;           
+        font-weight: bold;      
+        display: block;            
+      }
+      
+      #img-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;                  
+        margin-top: 20px;
+    }
+    
+    #img-grid img, #img-grid picture img {
+      width: 100%; 
+      height: auto;
+    }
+    
+    #img-grid picture {
+      grid-column: span 2; 
+    }
+
+    #about div{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        #plan div{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
+        #testimonials div{
+          display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        fieldset {
+          display: flex;
+          gap: 20px;
+          padding: 0;
+          margin: 0;
+          border: none;
+          box-sizing: border-box;
+        }
+        form{
+          position: relative;
+          padding-bottom: 70px;
+        }
+        input[type="submit"] {
+          padding: 0;
+          height: 50px; 
+          color: #fff;
+          background-color: var(--purple);
+          border: none;
+          margin-top: 10px;
+          font-size: 20px;
+          width:25%;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+        }
+    }
+
+    @media screen and (min-width: 1920px){
+
+      #menu-toggle {
+        position: absolute;
+        bottom:775px;
+        display:flex;
+        justify-content: center;
+        align-items:center;
+      }
+      
+      /* "Menu" label */
+      #menu-toggle label {
+        display: none;
+      }
+      
+      /* Hide the checkbox */
+      #toggle {
+        display: none;
+      }
+      
+      /* Style the dropdown menu */
+      #menu-toggle ul {
+        border:none;
+        list-style: none;                 
+        margin: 0;                 
+        display: flex; 
+        justify-content: center;
+        align-items: center;            
+        width: 100%;              
+        background: none;
+        z-index: 100;
+      }
+      
+      /* Style dropdown items */
+      #menu-toggle ul li {
+        color:#000000;
+        border:none;
+        display: flex;
+        margin: 10px;
+        padding: 5px;           
+        text-align: center;   
+        background-color:white;   
+      }
+
+      #menu-toggle ul li:hover{
+        background-color: var(--yellow);
+      }
+    
+      #menu-toggle ul li a {
+        text-decoration: none; 
+        color: black;           
+        font-size: 18px;           
+        font-weight: bold;      
+        display: block;            
+      }
+
+    #intro{
+      display:inline-flex;
+    }
+    #about div{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    #plan div{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    #testimonials div{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    
+    form label,
+    form input,
+    form select{
+      display: block;
+      width: 100%;
+    }
+    
+    form .custom-select {
+      width: 100%;
+    }
+
+    fieldset {
+      display: flex;
+      padding: 0;
+      margin: 0;
+      border: none;
+      box-sizing: border-box;
+    }
+    
+    form input[type="submit"] {
+      grid-column: span 3;
+        padding: 0;
+        height: 50px; 
+        color: #fff;
+        background-color: var(--purple);
+        border: none;
+        margin-top: 10px;
+        font-size: 20px;
+        width:15%;
+        position: absolute;
+        right: 0;
+        bottom: 70Spx;
+      }
+    }
+
+
+
+    
